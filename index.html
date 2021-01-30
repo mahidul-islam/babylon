@@ -58,12 +58,36 @@
         const createScene = () => {
             const scene = new BABYLON.Scene(engine);
 
-            const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 3, new BABYLON.Vector3(0, 0, 0));
+            const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 10, new BABYLON.Vector3(0, 0, 0));
             camera.attachControl(canvas, true);
 
             const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0));
 
+            // start your code here
+
+            const ground = BABYLON.MeshBuilder.CreateGround("ground", {
+                width: 10,
+                height: 10
+            });
             const box = BABYLON.MeshBuilder.CreateBox("box", {});
+            const box2 = BABYLON.MeshBuilder.CreateBox("box", {});
+
+            // const sound = new BABYLON.Sound("bounce", "sounds/bounce.wav", scene);
+
+            // sound.play();
+            // console.log(sound);
+
+            const boxMat = new BABYLON.StandardMaterial("roofMat");
+            boxMat.diffuseTexture = new BABYLON.Texture("https://www.babylonjs-playground.com/textures/floor.png");
+
+            box.position.y = .5;
+            box.scaling.x = 3;
+
+            box2.position.x = 3;
+            box2.position.y = .5;
+            box2.scaling.z = 2;
+
+            box2.material = boxMat;
 
             return scene;
         }
