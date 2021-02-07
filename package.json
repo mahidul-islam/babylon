@@ -1,0 +1,22 @@
+{
+  "name": "downloaded",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahidul-islam/babylon.git"
+  },
+  "author": "Zihan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahidul-islam/babylon/issues"
+  },
+  "homepage": "https://github.com/mahidul-islam/babylon#readme",
+  "dependencies": {
+    "babylonjs": "^4.2.0"
+  }
+}
